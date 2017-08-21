@@ -4,9 +4,9 @@ const APP_DIR = path.resolve(__dirname, 'src')
 const BUILD_DIR = path.resolve(__dirname, 'dist')
 
 module.exports = {
-  entry: APP_DIR + '/index.js',
+  entry: './index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: BUILD_DIR,
     filename: 'index.js'
   },
   module: {
@@ -24,7 +24,7 @@ module.exports = {
       },
       {
         test: /\.jsx$/,
-        use: "jsx-loader"
+        use: 'jsx-loader'
       }
     ]
   }
