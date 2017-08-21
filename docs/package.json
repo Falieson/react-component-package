@@ -1,0 +1,21 @@
+{
+  "name": "wps-react-hello-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node node_modules/webpack/bin/webpack.js",
+    "start": "python -m SimpleHTTPServer"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "jsx-loader": "0.13.2",
+    "path": "0.12.7",
+    "webpack": "3.5.5"
+  }
+}
