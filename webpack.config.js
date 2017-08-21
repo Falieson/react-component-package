@@ -1,21 +1,31 @@
-var webpack = require('webpack');
-var path = require('path');
+var path = require('path')
 
-var BUILD_DIR = path.resolve(__dirname, 'dist');
-var APP_DIR = path.resolve(__dirname, 'src');
+const APP_DIR = path.resolve(__dirname, 'src')
+const BUILD_DIR = path.resolve(__dirname, 'dist')
 
-var config = {
-  devtool:'source-map',
+module.exports = {
   entry: APP_DIR + '/index.js',
   output: {
-    path: BUILD_DIR,
+    path: path.resolve(__dirname, 'dist'),
     filename: 'index.js'
   },
-  module : {
-    loaders: [
-      { test: /\.jsx$/, loader: "jsx-loader" },
-    ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015']
+            }
+          }
+        ]
+      },
+      {
+        test: /\.jsx$/,
+        use: "jsx-loader"
+      }
+    ]
   }
-};
-
-module.exports = config;
+}

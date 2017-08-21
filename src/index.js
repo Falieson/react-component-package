@@ -1,5 +1,3 @@
-import hello from './hello/hello.jsx'
+import HelloMessage from './hello/hello.jsx'
 
-export {
-  hello
-}
+module.exports = HelloMessage
