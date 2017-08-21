@@ -12,19 +12,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
+        use: "jsx-loader"
+      },
+      {
+        test: /\.jsx?$/,
         use: [
           {
             loader: 'babel-loader',
             options: {
-              presets: ['es2015']
+              presets: ['es2015', 'react']
             }
           }
         ]
-      },
-      {
-        test: /\.jsx$/,
-        use: "jsx-loader"
       }
     ]
   }
