@@ -1,13 +1,15 @@
-'use strict'
-var React = require('react');
+import React from 'react'
 
-module.exports = React.createClass({
-    displayName: 'HelloMessage',
-    render: function(){
-        return <div className="hello">
+class HelloMessage extends React.Component {
+  render() {
+    return (
+      <div className="hello">
         (Hello React.
-        {this.props.children}
+          {this.props.children}
         )
-        </div>
-    }
-})
+      </div>
+    )
+  }
+}
+
+module.exports = HelloMessage
