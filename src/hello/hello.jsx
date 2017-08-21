@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-class HelloMessage extends React.Component {
+export default class HelloMessage extends Component {
   render() {
     return (
       <div className="hello">
@@ -11,5 +11,3 @@ class HelloMessage extends React.Component {
     )
   }
 }
-
-module.exports = HelloMessage
