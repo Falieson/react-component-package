@@ -12,10 +12,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx$/,
-        use: "jsx-loader"
-      },
-      {
         test: /\.jsx?$/,
         use: [
           {
